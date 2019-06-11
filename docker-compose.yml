@@ -1,7 +1,7 @@
 version: '3'
 services:
         app:
-                image: foo/bar:1.0
+                image: bydeinon/node-proxy-server:1.0
                 env_file:
                         - .env
                 ports:
