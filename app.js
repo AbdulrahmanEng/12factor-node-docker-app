@@ -14,6 +14,13 @@ const proxyBaseImageUrl = baseImageUrl
 	:express.static(path.join(__dirname,'public/images'));
 const app = express();
 
+app.get('/', (req, res) => {
+	res.send(`
+		<h1>Express</h1>
+		<p><img src="/images/trees.jpeg"/></p>
+		`);
+});
+
 app.use('/images', proxyBaseImageUrl);
 
 const host = process.env.IP || 'localhost';
